@@ -1,6 +1,14 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Welcome to My Assesment</h1>
+<p>Please Forgive my Asceticism</p>
 
 <%= form_tag("/sms/send", method: "post") do %>
-<!-- add form elements here -->
+    <%= label_tag(:q, "Input Number:") %>
+    <%= text_field_tag(:q) %>
+    <%= label_tag(:q, "Input Message:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Submit") %>
 <% end %>
+
+<!--Code throws the error as it is supposed to. Not sure about a few things
+Primarily, whether it is actually reading the number as it is supposed to
+and unsure if it is properly intaking both inputs.-->
