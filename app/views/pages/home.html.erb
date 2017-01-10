@@ -2,9 +2,7 @@
 <p>Please Forgive my Asceticism</p>
 
 <%= form_tag("/sms/send", method: "post") do %>
-    <%= label_tag(:q, "Input Number:") %>
-    <%= text_field_tag(:q) %>
-    <%= label_tag(:q, "Input Message:") %>
+    <%= label_tag(:q, "Input Message and Number:") %>
     <%= text_field_tag(:q) %>
     <%= submit_tag("Submit") %>
 <% end %>
@@ -12,3 +10,12 @@
 <!--Code throws the error as it is supposed to. Not sure about a few things
 Primarily, whether it is actually reading the number as it is supposed to
 and unsure if it is properly intaking both inputs.-->
+
+<!-- I also have no idea how to get rid of the annoying text 
+at the bottom of the page.
+
+<! I've found the problem. The fucking code is taking everything
+in as parameters, including the outhenticity tokens and submits.
+
+<!-- While I have found the problem, I have no fucking idea
+how I can fix it.
